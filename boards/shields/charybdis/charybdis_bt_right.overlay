@@ -30,7 +30,7 @@
 /* Trackball split node */
 trackball_right_split: split_trackball {
     compatible = "zmk,split-input-part";
-    device = <&trackball>;
+    device = <&trackball0>;
 };
 
 /* Enable trackball listener */
