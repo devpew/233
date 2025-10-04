@@ -27,6 +27,14 @@
 		;
 };
 
-&trackball_split {
-    device = <&trackball>;
+/ {
+    /* ensure split config attaches trackball properly */
+    trackball_split: split_trackball {
+        compatible = "zmk,split-input-part";
+        device = <&trackball>;
+    };
+};
+
+&trackball_listener {
+    status = "okay";
 };
