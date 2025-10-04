@@ -27,10 +27,12 @@
 		;
 };
 
-/* Trackball split node */
+/* Trackball split input — make sure the label exists in DTSI */
 trackball_right_split: split_trackball {
     compatible = "zmk,split-input-part";
-    device = <&trackball0>;
+#ifdef trackball
+    device = <&trackball>; /* Only if label 'trackball:' exists */
+#endif
 };
 
 /* Enable trackball listener */
