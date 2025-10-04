@@ -1,9 +1,19 @@
-if SHIELD_CHARYBDIS_DONGLE || SHIELD_CHARYBDIS_BT_RIGHT
+if SHIELD_CHARYBDIS_DONGLE
 
 config ZMK_KEYBOARD_NAME
 	default "Charybdis"
 
 config ZMK_SPLIT_ROLE_CENTRAL
+	default y
+
+endif
+
+if SHIELD_CHARYBDIS_BT_RIGHT
+
+config ZMK_KEYBOARD_NAME
+	default "Charybdis"
+
+config ZMK_SPLIT_BLE_ROLE_CENTRAL
 	default y
 
 endif
@@ -14,4 +24,5 @@ config ZMK_SPLIT
 	default y
 	
 endif
+
 
