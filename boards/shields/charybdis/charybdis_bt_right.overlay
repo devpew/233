@@ -27,11 +27,15 @@
 		;
 };
 
-&trackball_split {
-    device = <&trackball>;
+/ {
+    /* attach the trackball to split input */
+    trackball_split: split_trackball {
+        compatible = "zmk,split-input-part";
+        device = <&trackball>;
+    };
 };
 
+/* enable the trackball listener defined in charybdis_3610.dtsi */
 &trackball_listener {
     status = "okay";
 };
-
